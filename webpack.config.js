@@ -16,6 +16,10 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   devServer: {
@@ -26,11 +30,11 @@ module.exports = {
     port: 3000,
     open: true,
   },
-  mode: 'development', // 또는 'production'
+  mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html', // 기존의 index.html 파일 경로
-      filename: 'index.html', // 생성될 파일명
+      template: './public/index.html',
+      filename: 'index.html',
     }),
   ],
 };
