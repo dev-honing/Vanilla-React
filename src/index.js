@@ -5,10 +5,10 @@ import ReactDOM from 'react-dom';
 
 const App = () => {
   return (
-    <span>
+    <div>
       <h1>Hello, React!</h1>
-    </span>
+    </div>
   );
 };
 
-ReactDOM.render(<App />, document.body);
+ReactDOM.render(<App />, document.getElementById('root'));
